@@ -1,6 +1,6 @@
 import { NestApplication, NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import config from './config/config'
+import config from './config/config';
 class App {
   _app: Promise<NestApplication>;
   constructor() {

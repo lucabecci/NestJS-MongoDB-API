@@ -7,7 +7,7 @@ interface IConfig {
 
 export default <IConfig>{
   DB: {
-    URI: process.env.DB_URI || 'mongodb://localhost/nest-tutorial',
+    URI: process.env.DB_URI || 'mongodb://mongo:27017/nest',
   },
   PORT: process.env.PORT || 4000,
 };
