@@ -1,73 +1,143 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+# NestJS-Mongo-API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+### Simple API for notes. This API was created with Typescript, NestJS, Mongoose, MongoDB and Docker.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+I used Node/Typescript for the back-end.
 
-## Description
+> Created by Luca Becci
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 1. Started ⌨️
 
-## Installation
+for get the project you will use:
 
-```bash
-$ npm install
+```tsx
+git clone "https://github.com/lucabecci/NestJS-MongoDB-API"
+
 ```
 
-## Running the app
+## 2. Pre-requeriments 🛠
 
-```bash
-# development
-$ npm run start
+You will need this requeriments for good rendiment:
 
-# watch mode
-$ npm run start:dev
+- Node.JS > 10.X
+- npm > 6.X
+- Docker(if you will run this project with Docker)
 
-# production mode
-$ npm run start:prod
+## 3. Installation 🔩
+
+You will need run this comands for the installation:
+
+```
+With npm: 
+npm install //install the backend dependencies.
+
+With yarn:
+yarn install //install the backend dependencies.
+
 ```
 
-## Test
+## 4. Use the project
 
-```bash
-# unit tests
-$ npm run test
+### About the app
 
-# e2e tests
-$ npm run test:e2e
+the API use Node/Express/Typescript/MongoDB.
 
-# test coverage
-$ npm run test:cov
+### How to run the API
+
+1. In your terminal, navigate to the main directory.
+2. Run `npm install` to install all dependencies.
+3. Run `npm run build` for the api build
+4. Run `npm start:prod` to start the app.
+
+### How to run with Docker
+
+1. You need Docker and docker-compose.
+2. In your terminal, navigate to the main directory.
+3. Run `docker-compose up` to create the image.
+
+## 5. Project structure 📁
+
+### Backend 📂
+
+```
+|-- build
+|-- node_modules
+|-- src
+	|-- config
+		|-- config.ts
+	|-- tasks
+		|-- dto
+			|-- create-task-dto.ts
+		|-- interfaces
+			|-- Task.ts
+		|-- schema
+			|-- Task.schema.ts
+		|-- tasks.controller.spec.ts
+		|-- tasks.controller.ts
+		|-- tasks.module.ts
+		|-- task.service.ts
+		|-- task.service.spec.ts
+	|-- app.controller.spec.ts
+	|-- app.controller.ts
+	|-- app.module.ts
+	|-- app.service.ts
+	|-- main.ts
+|-- test
+|-- .eslintrc.js
+|-- .dockerignore
+|-- Dockerfile
+|-- docker-compose.yml
+|-- .gitignore
+|-- commitlint.config.js
+|-- .prettierrc
+|-- nodemon.json
+|-- package-lock.json
+|-- package.json
+|-- nest-cli.json
+|-- README.md
+|-- tscongif.build.json
+|-- tscongif.json
+|-- package-lock.lock
+
 ```
 
-## Support
+## 6. Build with 🛠
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Backend 🔧
 
-## Stay in touch
+DEPENDENCIES:
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- nest- Fast, unopinionated, minimalist web framework for node.
+- [mongoose](https://mongoosejs.com/) - Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports both promises and callbacks.
+- [rimraf](https://www.npmjs.com/package/rimraf) - The UNIX command rm -rf for node.
+- [rxjs](https://www.learnrxjs.io/) - RxJS is one of the hottest libraries in web development today. Offering a powerful, functional approach for dealing with events and with integration points into a growing number of frameworks, libraries, and utilities, the case for learning Rx has never been more appealing.
 
-## License
+DEV-DEPENDENCIES:
 
-Nest is [MIT licensed](LICENSE).
+- [typescript](https://www.typescriptlang.org/) - TypeScript is a language for application-scale JavaScript.
+- [husky](https://www.npmjs.com/package/husky) - Husky can prevent bad git commit, git push and more 🐶 woof!
+- [commitlint](https://commitlint.js.org/#/) - commitlint helps your team adhering to a commit convention. By supporting npm-installed configurations it makes sharing of commit conventions easy.
+- [prettier](https://prettier.io/) - Prettier is an opinionated code formatter.
+- [ts-node](https://www.npmjs.com/package/ts-node) - TypeScript execution and REPL for node.js, with source map support.
+- [nodemon](https://nodemon.io/) - Nodemon is a utility that will monitor for any changes in your source and automatically restart your server.
+- [eslint](https://eslint.org/) - ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript/Typescript code.
+
+## 7. Database 📫
+
+For the database i using PostgreSQL
+
+- MongoDB
+- Version: 3.6.8
+
+## 8. Versioned 1️⃣
+
+For the versioning, [ConventionalCommits] was used ([https://www.conventionalcommits.org/en/v1.0.0/](https://www.conventionalcommits.org/en/v1.0.0/))
+
+I using husky for the control in commits and push
+
+## 9. Author 🙎🏻‍♂️
+
+***Luca Becci -** code and documentation*
+
+- [github](https://github.com/lucabecci)
+- [twitter](https://twitter.com/lucabecci)
